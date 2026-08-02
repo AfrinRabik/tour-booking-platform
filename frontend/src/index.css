@@ -1,0 +1,79 @@
+:root {
+  /* Palette: vintage travel-poster inspired, not a generic AI default */
+  --ink: #0B3D3A;          /* deep atlas-teal - headers, nav, footer */
+  --ink-light: #145048;
+  --sand: #F1E8D6;         /* warm sand - page background */
+  --sand-dark: #E4D7BC;
+  --coral: #D6451C;        /* sunset coral - primary CTA */
+  --coral-dark: #B23913;
+  --brass: #B8902E;        /* brass/stamp gold - ratings, accents */
+  --cream: #FAF6EC;
+  --charcoal: #1E2623;     /* body text */
+  --charcoal-soft: #4A534F;
+  --border-soft: rgba(11, 61, 58, 0.16);
+  --success: #2F7A4C;
+  --danger: #B23913;
+
+  --font-display: 'Fraunces', Georgia, serif;
+  --font-body: 'Work Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+  --font-mono: 'IBM Plex Mono', 'Courier New', monospace;
+
+  --radius: 4px;
+  --shadow-card: 0 6px 20px rgba(11, 61, 58, 0.10);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: var(--font-body);
+  background: var(--sand);
+  color: var(--charcoal);
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}
+
+#root {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+h1, h2, h3, h4 {
+  font-family: var(--font-display);
+  color: var(--ink);
+  margin: 0 0 0.5em 0;
+  line-height: 1.15;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+button {
+  font-family: var(--font-body);
+  cursor: pointer;
+}
+
+input, select, textarea {
+  font-family: var(--font-body);
+}
+
+:focus-visible {
+  outline: 2px solid var(--coral);
+  outline-offset: 2px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.001ms !important;
+    transition-duration: 0.001ms !important;
+  }
+}
